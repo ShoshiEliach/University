@@ -17,10 +17,11 @@ namespace verysoft_test
         protected string address;
 
         // Default constructor
-        public Person()
+        public Person() 
         {
 
         }
+        public Person(string name, int age,string address) { this.name = name; this.age = age;this.address = address; }
 
         // Parameterized constructor to initialize name, age, and address
         public Person(string name, int age, string address)

@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 namespace verysoft_test
 {
     // Student class that inherits from the Person class
-    class Student : Person
-    {
+     class Student : Person
+     {
         // Private field to store the student's ID
         private string studentId;
 
@@ -19,7 +19,7 @@ namespace verysoft_test
         // Parameterized constructor to initialize the studentId, name, age, and address
         public Student(string studentId, string name, int age, string address) : base(name, age, address)
         {
-            this.studentId = studentId;
+            this.studentId = studentId; 
         }
 
         // Override method to return the role of the person, in this case "Student"
@@ -44,5 +44,6 @@ namespace verysoft_test
             Console.Write(this.getAddress() + " ");
             Console.WriteLine();
         }
-    }
+
+     }
 }
