@@ -12,9 +12,9 @@ namespace verysoft_test
         // Private fields for course name and course code
         private string courseName;
         private string courseCode;
+        private List<Person> participants=new List<Person>();
 
-        // List to store participants (Person objects)
-        private List<Person> participants = new List<Person>();
+
 
         // Default constructor
         public UndergraduateCourse() { }
