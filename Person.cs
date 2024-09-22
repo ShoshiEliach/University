@@ -17,7 +17,7 @@ namespace verysoft_test
         protected string address;
 
         // Default constructor
-        public Person()
+        public Person() 
         {
 
         }

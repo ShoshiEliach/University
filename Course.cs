@@ -23,5 +23,6 @@ namespace verysoft_test
 
         // Method to print course details
         void print();
+
     }
 }

@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Text;  
 using System.Threading.Tasks;
 
 namespace verysoft_test
 {
     // UndergraduateCourse class implements the Course interface
     class UndergraduateCourse : Course
-    {
+     {
         // Private fields for course name and course code
         private string courseName;
         private string courseCode;
@@ -21,7 +21,7 @@ namespace verysoft_test
 
         // Parameterized constructor to initialize course name and code
         public UndergraduateCourse(string courseName, string courseCode)
-        {
+        {     
             this.courseName = courseName;
             this.courseCode = courseCode;
         }
@@ -29,7 +29,7 @@ namespace verysoft_test
         // Method to return the course name
         public string getCourseName()
         {
-            return courseName;
+         return courseName;
         }
 
         // Method to return the course code
@@ -56,5 +56,5 @@ namespace verysoft_test
             Console.Write(this.getCourseCode() + " ");
             Console.WriteLine(this.getCourseName());
         }
-    }
+     }
 }

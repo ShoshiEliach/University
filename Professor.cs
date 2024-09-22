@@ -8,7 +8,7 @@ namespace verysoft_test
 {
     // Professor class inheriting from the Person class
     class Professor : Person
-    {
+     {
         // Private field to store the professor's department
         private string department;
 
@@ -28,9 +28,9 @@ namespace verysoft_test
         }
 
         // Method that describing the teaching activity 
-        public string teach()
-        {
-            return "";
+        public string teach() 
+        { 
+            return "active"; 
         }
 
         // Override method to display the professor's details
