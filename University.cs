@@ -38,7 +38,8 @@ class University
         }
 
         // Define the list of courses (Graduate and Undergraduate)
-        List<Course> courseList = new List<Course>();
+        List<GraduateCourse> graduateCourseList = new List<GraduateCourse>();
+        List<UndergraduateCourse> UndergraduateCourseList = new List<UndergraduateCourse>();
         GraduateCourse graduateCourse1 = new GraduateCourse("Artificial Intelligence", "224", "Development of algorithms to improve accuracy in disease prediction based on patient data");
         GraduateCourse graduateCourse2 = new GraduateCourse("Data Science", "145", "Big data analysis for the impact of labor market trends");
         GraduateCourse graduateCourse3 = new GraduateCourse("Psychology", "168", "The effect of cognitive-behavioral therapy on depressive disorders");
@@ -47,27 +48,33 @@ class University
         UndergraduateCourse undergraduateCourse3 = new UndergraduateCourse("Human Physiology", "314");
 
         // Add courses to the courseList
-        courseList.Add(graduateCourse1);
-        courseList.Add(graduateCourse2);
-        courseList.Add(graduateCourse3);
-        courseList.Add(undergraduateCourse1);
-        courseList.Add(undergraduateCourse2);
-        courseList.Add(undergraduateCourse3);
+        graduateCourseList.Add(graduateCourse1);
+        graduateCourseList.Add(graduateCourse2);
+        graduateCourseList.Add(graduateCourse3);
+        UndergraduateCourseList.Add(undergraduateCourse1);
+        UndergraduateCourseList.Add(undergraduateCourse2);
+        UndergraduateCourseList.Add(undergraduateCourse3);
 
         // Add participants (students and professors) to courses
         List<Person> tempersonList = new List<Person>(personList);
         while (tempersonList.Count > 0)
         {
-            foreach (var c in courseList)
+            foreach (var graduateC in graduateCourseList)
             {
-                c.addParticipant(tempersonList.First());
+                graduateC.addParticipant(tempersonList.First());
+                tempersonList.RemoveAt(0);
+
+            }
+            foreach (var UndergraduateC in UndergraduateCourseList)
+            {
+                UndergraduateC.addParticipant(tempersonList.First());
                 tempersonList.RemoveAt(0);
 
             }
         }
 
         // Display the courses and participants
-        foreach (var c in courseList)
+        foreach (var c in  graduateCourseList)
         {
             Console.WriteLine("The course:");
             c.print();
@@ -80,6 +87,21 @@ class University
             }
             Console.WriteLine(" ");
         }
+
+        foreach (var c in UndergraduateCourseList)
+        {
+            Console.WriteLine("The course:");
+            c.print();
+            Console.WriteLine("The participants:");
+
+            foreach (var p in c.getParticipants())
+            {
+                p.print();
+
+            }
+            Console.WriteLine(" ");
+        }
+
 
 
     }
